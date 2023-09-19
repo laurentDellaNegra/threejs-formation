@@ -6,15 +6,14 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+permissions:
+  contents: write
+
 jobs:
-  build:
-    name: Build
+  build-and-deploy:
+    name: Build and deploy
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    # To use Remote Caching, uncomment the next lines and follow the steps below.
-    # env:
-    #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-    #  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
 
     steps:
       - name: Check out code
@@ -37,3 +36,8 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
