@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Move index.html in dist
+mkdir ./dist
 cp index.html ./dist/index.html
 
 # Define an array of strings
