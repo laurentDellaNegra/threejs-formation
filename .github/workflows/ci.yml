@@ -37,7 +37,10 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Create dist
+        run: pnpm create-dist
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .
+          folder: dist
