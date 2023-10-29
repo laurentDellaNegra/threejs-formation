@@ -1,4 +1,4 @@
-varying vec 2 vUv;
+varying vec2 vUv;
 
 void main()
 {
