@@ -9,7 +9,7 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
  */
 // Debug
 const gui = new GUI({
-    width: 400
+    width: 400,
 })
 
 // Canvas
@@ -33,25 +33,55 @@ const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
 /**
- * Object
+ * Textures
  */
-const cube = new THREE.Mesh(
-    new THREE.BoxGeometry(1, 1, 1),
-    new THREE.MeshBasicMaterial()
-)
+const bakedTexture = textureLoader.load('baked.jpg')
+bakedTexture.flipY = false
+bakedTexture.colorSpace = THREE.SRGBColorSpace
+/**
+ * Materials
+ */
+// Baked
+const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
 
-scene.add(cube)
+/**
+ * Model
+ */
+gltfLoader.load('portal.glb', (gltf) => {
+    const bakedMesh = gltf.scene.children.find(
+        (child) => child.name === 'baked'
+    )
+    const poleLightAMesh = gltf.scene.children.find(
+        (child) => child.name === 'poleLightA'
+    )
+    const poleLightBMesh = gltf.scene.children.find(
+        (child) => child.name === 'poleLightB'
+    )
+    const portalLight = gltf.scene.children.find(
+        (child) => child.name === 'portalLight'
+    )
+    poleLightAMesh.material = poleLightMaterial
+    poleLightBMesh.material = poleLightMaterial
+    portalLight.material = portalLightMaterial
+    bakedMesh.material = bakedMaterial
+
+    scene.add(gltf.scene)
+})
+
+// Pole light material
+const poleLightMaterial = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
+// portal light material
+const portalLightMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff })
 
 /**
  * Sizes
  */
 const sizes = {
     width: window.innerWidth,
-    height: window.innerHeight
+    height: window.innerHeight,
 }
 
-window.addEventListener('resize', () =>
-{
+window.addEventListener('resize', () => {
     // Update sizes
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
@@ -69,7 +99,12 @@ window.addEventListener('resize', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(
+    45,
+    sizes.width / sizes.height,
+    0.1,
+    100
+)
 camera.position.x = 4
 camera.position.y = 2
 camera.position.z = 4
@@ -84,7 +119,7 @@ controls.enableDamping = true
  */
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
-    antialias: true
+    antialias: true,
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -94,8 +129,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
  */
 const clock = new THREE.Clock()
 
-const tick = () =>
-{
+const tick = () => {
     const elapsedTime = clock.getElapsedTime()
 
     // Update controls
