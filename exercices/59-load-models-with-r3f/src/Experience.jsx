@@ -1,31 +1,45 @@
 import { OrbitControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
+import { Suspense, lazy } from 'react'
+import Models from './Models'
+import Placeholder from './Placeholder'
+import Hamburger from './Hamburger'
+import Fox from './Fox'
 
-export default function Experience()
-{
-    return <>
+export default function Experience() {
+    // const Models = lazy(() => import('./Models'))
+    return (
+        <>
+            <Perf position="top-left" />
 
-        <Perf position="top-left" />
+            <OrbitControls makeDefault />
 
-        <OrbitControls makeDefault />
+            <directionalLight
+                castShadow
+                position={[1, 2, 3]}
+                intensity={4.5}
+                shadow-normalBias={0.04}
+            />
+            <ambientLight intensity={1.5} />
 
-        <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 4.5 } />
-        <ambientLight intensity={ 1.5 } />
+            <Suspense
+                fallback={<Placeholder position-y={0.5} scale={[2, 3, 2]} />}
+            >
+                {/* <Models /> */}
+                <Hamburger scale={0.35} />
+            </Suspense>
 
-        <mesh castShadow position-x={ - 2 }>
-            <sphereGeometry />
-            <meshStandardMaterial color="orange" />
-        </mesh>
+            <Fox />
 
-        <mesh castShadow position-x={ 2 } scale={ 1.5 }>
-            <boxGeometry />
-            <meshStandardMaterial color="mediumpurple" />
-        </mesh>
-
-        <mesh receiveShadow position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 10 }>
-            <planeGeometry />
-            <meshStandardMaterial color="greenyellow" />
-        </mesh>
-
-    </>
+            <mesh
+                receiveShadow
+                position-y={-1}
+                rotation-x={-Math.PI * 0.5}
+                scale={10}
+            >
+                <planeGeometry />
+                <meshStandardMaterial color="greenyellow" />
+            </mesh>
+        </>
+    )
 }
