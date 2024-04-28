@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "4.1",
@@ -18,7 +17,6 @@
     "r3f-perf": "^7.1.2",
     "react": "18.2",
     "react-dom": "18.2",
-    "three": "^0.158.0",
-    "vite-plugin-glsl": "^1.1.2"
+    "three": "^0.158.0"
   }
 }
