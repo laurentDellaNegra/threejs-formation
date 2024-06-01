@@ -610,6 +610,29 @@ importers:
       vite: 5.2.12
       vite-plugin-restart: 0.4.0_vite@5.2.12
 
+  exercices/64-fun-and-simple-portfolio-with-r3f:
+    specifiers:
+      '@react-three/drei': ^9.105.4
+      '@react-three/fiber': ^8.16.2
+      '@vitejs/plugin-react': '4.2'
+      r3f-perf: ^7.2.1
+      react: '18.3'
+      react-dom: '18.3'
+      three: ^0.164.1
+      vite: ^5.2.10
+      vite-plugin-restart: ^0.4.0
+    dependencies:
+      '@react-three/drei': 9.105.6_g6rj7qmwkckokv7zggnhzojtmi
+      '@react-three/fiber': 8.16.6_ghw73l7uywux2zqxk4pwopgffu
+      r3f-perf: 7.2.1_g6rj7qmwkckokv7zggnhzojtmi
+      react: 18.3.1
+      react-dom: 18.3.1_react@18.3.1
+      three: 0.164.1
+    devDependencies:
+      '@vitejs/plugin-react': 4.2.1_vite@5.2.12
+      vite: 5.2.12
+      vite-plugin-restart: 0.4.0_vite@5.2.12
+
 packages:
 
   /@ampproject/remapping/2.2.1:
@@ -4477,14 +4500,14 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.24.6
-      '@babel/generator': 7.23.0
-      '@babel/parser': 7.23.0
+      '@babel/generator': 7.24.6
+      '@babel/parser': 7.24.6
       '@babel/plugin-syntax-jsx': 7.22.5_@babel+core@7.24.6
       '@babel/plugin-syntax-typescript': 7.22.5_@babel+core@7.24.6
       '@babel/preset-env': 7.23.2_@babel+core@7.24.6
       '@babel/preset-typescript': 7.23.2_@babel+core@7.24.6
-      '@babel/traverse': 7.23.2
-      '@babel/types': 7.23.0
+      '@babel/traverse': 7.24.6
+      '@babel/types': 7.24.6
       '@npmcli/package-json': 2.0.0
       '@remix-run/server-runtime': 1.17.0
       '@vanilla-extract/integration': 6.2.2
