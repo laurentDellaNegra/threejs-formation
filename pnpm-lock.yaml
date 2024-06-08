@@ -658,6 +658,29 @@ importers:
       vite: 5.2.12
       vite-plugin-restart: 0.4.0_vite@5.2.12
 
+  exercices/66-create-a-game-with-r3f:
+    specifiers:
+      '@react-three/drei': ^9.105.4
+      '@react-three/fiber': ^8.16.2
+      '@vitejs/plugin-react': '4.2'
+      r3f-perf: ^7.2.1
+      react: '18.3'
+      react-dom: '18.3'
+      three: ^0.164.1
+      vite: ^5.2.10
+      vite-plugin-restart: ^0.4.0
+    dependencies:
+      '@react-three/drei': 9.105.6_g6rj7qmwkckokv7zggnhzojtmi
+      '@react-three/fiber': 8.16.6_ghw73l7uywux2zqxk4pwopgffu
+      r3f-perf: 7.2.1_g6rj7qmwkckokv7zggnhzojtmi
+      react: 18.3.1
+      react-dom: 18.3.1_react@18.3.1
+      three: 0.164.1
+    devDependencies:
+      '@vitejs/plugin-react': 4.2.1_vite@5.2.12
+      vite: 5.2.12
+      vite-plugin-restart: 0.4.0_vite@5.2.12
+
 packages:
 
   /@ampproject/remapping/2.2.1:
