@@ -1,239 +1,975 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-slate-900">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Threejs journey course</title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <ul>
-            <li>
-                <a href="exercices/04-local-server-final/index.html"
-                    >04-local-server-final</a
+    <body class="min-h-screen p-8 bg-slate-900">
+        <div
+            class="max-w-6xl mx-auto bg-black shadow-2xl rounded-lg overflow-hidden border border-purple-500"
+        >
+            <header
+                class="bg-gradient-to-r from-purple-600 to-pink-500 text-white p-6"
+            >
+                <h1
+                    class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400"
                 >
-            </li>
-            <li>
-                <a href="exercices/05-transform-objects-final/index.html"
-                    >05-transform-objects-final</a
+                    Threejs journey
+                </h1>
+            </header>
+            <nav class="p-6">
+                <ul
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                 >
-            </li>
-            <li>
-                <a href="exercices/06-animations-final/index.html"
-                    >06-animations-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/07-cameras-final/index.html"
-                    >07-cameras-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/08-fullscreen-and-resizing-final/index.html"
-                    >08-fullscreen-and-resizing-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/09-geometries-final/index.html"
-                    >09-geometries-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/10-debug-ui-final/index.html"
-                    >10-debug-ui-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/11-textures-final/index.html"
-                    >11-textures-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/12-materials-final/index.html"
-                    >12-materials-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/13-3d-text-final/index.html"
-                    >13-3d-text-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/14-go-live-final/index.html"
-                    >14-go-live-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/15-lights-final/index.html"
-                    >15-lights-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/16-shadows-final/index.html"
-                    >16-shadows-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/17-haunted-house-final/index.html"
-                    >17-haunted-house-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/18-particles-final/index.html"
-                    >18-particles-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/19-galaxy-generator-final/index.html"
-                    >19-galaxy-generator-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/20-scroll-based-animation-final/index.html"
-                    >20-scroll-based-animation-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/21-physics-final/index.html"
-                    >21-physics-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/22-imported-models-final/index.html"
-                    >22-imported-models-final</a
-                >
-            </li>
-            <li>
-                <a
-                    href="exercices/23-raycaster-and-mouse-events-final/index.html"
-                    >23-raycaster-and-mouse-events-final</a
-                >
-            </li>
-            <li>
-                <a
-                    href="exercices/24-custom-models-with-blender-final/index.html"
-                    >24-custom-models-with-blender-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/25-environment-map-final/index.html"
-                    >25-environment-map-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/26-realistic-render-final/index.html"
-                    >26-realistic-render-final</a
-                >
-            </li>
-            <li>
-                <a
-                    href="27-code-structuring-for-bigger-projects-final/index.html"
-                    >27-code-structuring-for-bigger-projects-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/28-shaders-final/index.html"
-                    >28-shaders-final</a
-                >
-            </li>
-            <li>
-                <a href="exercices/29-shader-patterns/index.html"
-                    >29-shader-patterns</a
-                >
-            </li>
-            <li>
-                <a href="exercices/30-raging-sea/index.html">30-raging-sea</a>
-            </li>
-            <li>
-                <a href="exercices/30-animated-galaxy/index.html"
-                    >30-animated-galaxy</a
-                >
-            </li>
-            <li>
-                <a href="exercices/31-modified-materials/index.html"
-                    >31-modified-materials</a
-                >
-            </li>
-            <li>
-                <a href="exercices/32-post-processing/index.html"
-                    >32-post-processing</a
-                >
-            </li>
-            <li>
-                <a href="exercices/33-performance-tips/index.html"
-                    >33-performance-tips</a
-                >
-            </li>
-            <li>
-                <a href="exercices/34-intro-and-loading-progress/index.html"
-                    >34-intro-and-loading-progress</a
-                >
-            </li>
-            <li>
-                <a href="exercices/35-mixing-html-and-webgl/index.html"
-                    >35-mixing-html-and-webgl</a
-                >
-            </li>
-            <li>
-                <a
-                    href="exercices/51-importing-and-optimizing-the-scene/index.html"
-                    >51-importing-and-optimizing-the-scene</a
-                >
-            </li>
-            <li>
-                <a href="exercices/52-adding-details-to-the-scene/index.html"
-                    >52-adding-details-to-the-scene</a
-                >
-            </li>
-            <li>
-                <a href="exercices/55-first-r3f-application/index.html"
-                    >55-first-r3f-application</a
-                >
-            </li>
-            <li>
-                <a href="exercices/56-r3f-drei/index.html">56-r3f-drei</a>
-            </li>
-            <li>
-                <a href="exercices/57-debug-a-r3f-application/index.html"
-                    >57-debug-a-r3f-application</a
-                >
-            </li>
-            <li>
-                <a
-                    href="exercices/58-environment-and-staging-with-r3f/index.html"
-                    >58-environment-and-staging-with-r3f</a
-                >
-            </li>
-            <li>
-                <a href="exercices/60-3d-text-with-r3f/index.html"
-                    >60-3d-text-with-r3f</a
-                >
-            </li>
-            <li>
-                <a href="exercices/61-portal-scene-with-r3f/index.html"
-                    >61-portal-scene-with-r3f</a
-                >
-            </li>
-            <li>
-                <a href="exercices/62-mouse-events-with-r3f/index.html"
-                    >62-mouse-events-with-r3f</a
-                >
-            </li>
-            <li>
-                <a href="exercices/63-post-processing-with-r3f/index.html"
-                    >63-post-processing-with-r3f</a
-                >
-            </li>
-            <li>
-                <a
-                    href="exercices/64-fun-and-simple-portfolio-with-r3f/index.html"
-                    >64-fun-and-simple-portfolio-with-r3f</a
-                >
-            </li>
-            <li>
-                <a href="exercices/65-physics-with-r3f/index.html"
-                    >65-physics-with-r3f</a
-                >
-            </li>
-        </ul>
+                    <li class="group">
+                        <a
+                            href="exercices/04-local-server-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/04-local-server-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 04-local-server-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >04-local-server-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/05-transform-objects-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/05-transform-objects-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 05-transform-objects-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >05-transform-objects-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/06-animations-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/06-animations-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 06-animations-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >06-animations-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/07-cameras-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/07-cameras-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 07-cameras-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >07-cameras-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/08-fullscreen-and-resizing-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/08-fullscreen-and-resizing-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 08-fullscreen-and-resizing-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >08-fullscreen-and-resizing-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/09-geometries-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/09-geometries-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 09-geometries-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >09-geometries-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/10-debug-ui-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/10-debug-ui-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 10-debug-ui-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >10-debug-ui-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/11-textures-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/11-textures-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 11-textures-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >11-textures-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/12-materials-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/12-materials-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 12-materials-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >12-materials-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/13-3d-text-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/13-3d-text-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 13-3d-text-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >13-3d-text-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/14-go-live-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/14-go-live-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 14-go-live-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >14-go-live-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/15-lights-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/15-lights-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 15-lights-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >15-lights-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/16-shadows-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/16-shadows-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 16-shadows-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >16-shadows-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/17-haunted-house-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/17-haunted-house-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 17-haunted-house-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >17-haunted-house-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/18-particles-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/18-particles-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 18-particles-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >18-particles-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/19-galaxy-generator-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/19-galaxy-generator-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 19-galaxy-generator-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >19-galaxy-generator-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/20-scroll-based-animation-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/20-scroll-based-animation-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 20-scroll-based-animation-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >20-scroll-based-animation-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/21-physics-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/21-physics-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 21-physics-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >21-physics-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/22-imported-models-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/22-imported-models-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 22-imported-models-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >22-imported-models-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/23-raycaster-and-mouse-events-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/23-raycaster-and-mouse-events-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 23-raycaster-and-mouse-events-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >23-raycaster-and-mouse-events-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/24-custom-models-with-blender-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/24-custom-models-with-blender-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 24-custom-models-with-blender-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >24-custom-models-with-blender-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/25-environment-map-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/25-environment-map-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 25-environment-map-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >25-environment-map-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/26-realistic-render-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/26-realistic-render-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 26-realistic-render-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >26-realistic-render-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/27-code-structuring-for-bigger-projects-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/27-code-structuring-for-bigger-projects-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 27-code-structuring-for-bigger-projects-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >27-code-structuring-for-bigger-projects-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/28-shaders-final/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/28-shaders-final/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 28-shaders-final"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >28-shaders-final</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/29-shader-patterns/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/29-shader-patterns/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 29-shader-patterns"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >29-shader-patterns</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/30-raging-sea/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/30-raging-sea/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 30-raging-sea"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >30-raging-sea</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/30-animated-galaxy/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/30-animated-galaxy/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 30-animated-galaxy"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >30-animated-galaxy</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/31-modified-materials/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/31-modified-materials/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 31-modified-materials"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >31-modified-materials</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/32-post-processing/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/32-post-processing/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 32-post-processing"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >32-post-processing</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/33-performance-tips/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/33-performance-tips/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 33-performance-tips"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >33-performance-tips</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/34-intro-and-loading-progress/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/34-intro-and-loading-progress/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 34-intro-and-loading-progress"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >34-intro-and-loading-progress</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/35-mixing-html-and-webgl/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/35-mixing-html-and-webgl/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 35-mixing-html-and-webgl"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >35-mixing-html-and-webgl</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/51-importing-and-optimizing-the-scene/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/51-importing-and-optimizing-the-scene/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 51-importing-and-optimizing-the-scene"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >51-importing-and-optimizing-the-scene</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/52-adding-details-to-the-scene/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/52-adding-details-to-the-scene/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 52-adding-details-to-the-scene"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >52-adding-details-to-the-scene</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/55-first-r3f-application/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/55-first-r3f-application/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 55-first-r3f-application"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >55-first-r3f-application</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/56-r3f-drei/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/56-r3f-drei/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 56-r3f-drei"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >56-r3f-drei</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/57-debug-a-r3f-application/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/57-debug-a-r3f-application/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 57-debug-a-r3f-application"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >57-debug-a-r3f-application</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/58-environment-and-staging-with-r3f/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/58-environment-and-staging-with-r3f/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 58-environment-and-staging-with-r3f"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >58-environment-and-staging-with-r3f</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/60-3d-text-with-r3f/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/60-3d-text-with-r3f/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 60-3d-text-with-r3f"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >60-3d-text-with-r3f</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/61-portal-scene-with-r3f/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/61-portal-scene-with-r3f/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 61-portal-scene-with-r3f"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >61-portal-scene-with-r3f</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/62-mouse-events-with-r3f/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/62-mouse-events-with-r3f/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 62-mouse-events-with-r3f"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >62-mouse-events-with-r3f</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/63-post-processing-with-r3f/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/63-post-processing-with-r3f/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 63-post-processing-with-r3f"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >63-post-processing-with-r3f</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/64-fun-and-simple-portfolio-with-r3f/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/64-fun-and-simple-portfolio-with-r3f/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 64-fun-and-simple-portfolio-with-r3f"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >64-fun-and-simple-portfolio-with-r3f</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a
+                            href="exercices/65-physics-with-r3f/index.html"
+                            class="block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+                        >
+                            <img
+                                src="https://api.microlink.io?url=https://laurentdellanegra.github.io/threejs-formation/exercices/65-physics-with-r3f/index.html&screenshot=true&meta=false&embed=screenshot.url"
+                                alt="Preview of 65-physics-with-r3f"
+                                class="w-full h-40 object-cover"
+                                loading="lazy"
+                            />
+                            <div
+                                class="p-4 bg-gray-800 group-hover:bg-gray-700 transition-colors duration-300"
+                            >
+                                <span
+                                    class="text-lg font-semibold text-pink-500 group-hover:text-cyan-400 transition-colors duration-300"
+                                    >65-physics-with-r3f</span
+                                >
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </body>
 </html>
