@@ -34,11 +34,8 @@ jobs:
             - name: Install dependencies
               run: pnpm install
 
-            - name: Build
-              run: pnpm build
-
             - name: Create dist
-              run: pnpm create-dist
+              run: pnpm build-and-create-dist
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
